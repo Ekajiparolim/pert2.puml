@@ -1,0 +1,27 @@
+@startuml pert2
+
+
+actor Dosen as ds 
+actor Mahasiswa as mh 
+
+package classroom{
+    usecase "menerima penjadwalan" as U1
+    usecase "pilih matakuliah" as U2
+    usecase "ruang perkuliahan" as U3
+    usecase "jadwal kuliah" as U4
+    usecase "mengajar mahasiswa" as U5
+    usecase "tolak mengajar" as U6
+
+    
+}
+
+mh --> U1
+U1 .> U2
+U1 .>U3
+mh --> U4
+ds -- U5
+U5 .> U6 :extend
+
+
+
+@enduml
